@@ -26,8 +26,34 @@ M.fg = function(group, col)
    cmd("hi " .. group .. " guifg=" .. col)
 end
 
+M.merge_tb = function(t1, t2)
+  return vim.tbl_deep_extend("force", t1, t2)
+end
+
 M.keymap = function(mode, key, cmd)
     vim.api.nvim_set_keymap(mode, key, cmd, { noremap = true, silent = true })
 end
+
+M.get_colors = function(type)
+   local name
+
+   -- if vim.g.nvchad_theme then
+   --    name = vim.g.nvchad_theme
+   -- else
+   --    name = require("core.utils").load_config().ui.theme
+   --    vim.g.nvchad_theme = name
+   -- end
+
+   -- theme paths
+   local present, default_theme = pcall(require, "colors.themes.onedark")
+
+   if present then
+      return default_theme[type]
+   else
+      error "No such theme bruh >_< "
+   end
+end
+
+
 
 return M

@@ -1,8 +1,30 @@
-local present, base16 = pcall(require, "base16")
+-- local present, base16 = pcall(require, "base16")
+--
+-- if present then
+--   base16(base16.themes("onedark"), true)
+-- end
+--
+local merge_tb = require('core.utils').merge_tb
 
-if present then
-  base16(base16.themes("onedark"), true)
+local highlights = {}
+local hl_dir = vim.fn.stdpath "config" .. "/lua/colors/integrations"
+local hl_files = require("plenary.scandir").scan_dir(hl_dir, {})
+
+for _, file in ipairs(hl_files) do
+   local a = vim.fn.fnamemodify(file, ":t")
+   a = vim.fn.fnamemodify(a, ":r")
+
+   local integration = require("colors.integrations." .. a)
+   highlights = merge_tb(highlights, integration)
 end
+
+for hl, col in pairs(highlights) do
+   vim.api.nvim_set_hl(0, hl, col)
+end
+
+
+
+
 
 local present, lualine = pcall(require, "lualine")
 if present then
@@ -34,4 +56,4 @@ if present then
   }
 end
 
-require 'colors.highlights'
+-- require 'colors.highlights'
