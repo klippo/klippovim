@@ -7,7 +7,7 @@
 ╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚═╝      ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 ```
 
-Highly opiniated neovim setup with bits and pieces from everywhere, a lot from (NvChad)[https://github.com/NvChad]
+Highly opiniated neovim setup with bits and pieces from everywhere, a lot from [NvChad]([https://github.com/NvChad)
 
 ```
 $ git clone git@github.com:klippo/klippovim.git ~/.config/nvim
