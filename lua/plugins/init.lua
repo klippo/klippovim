@@ -71,6 +71,7 @@ local plugins = {
   { 'kdheepak/lazygit.nvim' },
   { 'lewis6991/gitsigns.nvim' },
   { 'akinsho/git-conflict.nvim' },
+  {'preservim/vim-markdown'},
 
   { 'sudormrfbin/cheatsheet.nvim' }
 
