@@ -12,6 +12,7 @@ local plugins = {
   { 'nathom/filetype.nvim' },
   { 'wbthomason/packer.nvim' },
   { 'saltstack/salt-vim' },
+  {'google/vim-jsonnet'},
   {
     'nvim-treesitter/nvim-treesitter',
 --    event = { 'BufRead', 'BufNewFile' },

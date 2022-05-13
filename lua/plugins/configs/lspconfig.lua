@@ -44,6 +44,7 @@ local servers = {
   'golangci_lint_ls',
   'pyright',
   'salt_ls',
+  'jsonnet_ls',
   'terraformls',
   'tflint',
   'yamlls'
