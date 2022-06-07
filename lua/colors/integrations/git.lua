@@ -2,6 +2,30 @@ local theme = require("core.utils").get_colors "base_16"
 
 return {
 
+  GitConflictCurrentLabel = {
+    bg = theme.base0B,
+    fg = theme.base00,
+    bold = true,
+  },
+  GitConflictCurrent = {
+    bg = theme.base00,
+  },
+  GitConflictIncomingLabel = {
+    bg = theme.base09,
+    fg = theme.base00,
+    bold = true,
+  },
+  GitConflictIncoming = {
+    bg = theme.base01,
+  },
+  GitConflictAncestorLabel = {
+    bg = theme.base09,
+    fg = theme.base00,
+    bold = true,
+  },
+  GitConflictAncestor = {
+    bg = theme.base04,
+  },
    -- git commits
    gitcommitOverflow = {
       fg = theme.base08,
