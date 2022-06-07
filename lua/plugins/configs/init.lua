@@ -3,6 +3,7 @@
 -- require('project_nvim').setup()
 local plugin_configs = {
   "telescope",
+  "colorizer",
   "nvimtree",
   "gitsigns",
   "lspconfig",

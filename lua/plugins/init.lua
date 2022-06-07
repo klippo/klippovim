@@ -12,17 +12,14 @@ local plugins = {
   { 'nathom/filetype.nvim' },
   { 'wbthomason/packer.nvim' },
   { 'saltstack/salt-vim' },
-  {'google/vim-jsonnet'},
   {
     'nvim-treesitter/nvim-treesitter',
---    event = { 'BufRead', 'BufNewFile' },
+    --    event = { 'BufRead', 'BufNewFile' },
     run = ':TSUpdate'
   },
-  {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  },
+  --
   { 'klippo/nvim-base16.lua' },
+  { 'nvim-lualine/lualine.nvim' },
   { 'numToStr/Comment.nvim', },
   { 'andymass/vim-matchup' },
   { 'windwp/nvim-autopairs' },
@@ -44,6 +41,7 @@ local plugins = {
   { 'hrsh7th/nvim-cmp' },
   { 'L3MON4D3/LuaSnip' },
   { 'saadparwaiz1/cmp_luasnip' },
+
   { 'psliwka/vim-dirtytalk', run = ':DirtytalkUpdate' },
 
   { 'folke/trouble.nvim' },
@@ -64,6 +62,7 @@ local plugins = {
   -- { 'stevearc/dressing.nvim' },
 
   { 'vladdoster/remember.nvim' },
+  { 'lukas-reineke/indent-blankline.nvim' },
 
   { 'ellisonleao/glow.nvim' },
   { 'windwp/nvim-spectre' },
@@ -72,9 +71,11 @@ local plugins = {
   { 'kdheepak/lazygit.nvim' },
   { 'lewis6991/gitsigns.nvim' },
   { 'akinsho/git-conflict.nvim' },
-  {'preservim/vim-markdown'},
 
-  { 'sudormrfbin/cheatsheet.nvim' }
+  { 'preservim/vim-markdown' },
+  { 'sudormrfbin/cheatsheet.nvim' },
+
+  { 'NvChad/nvim-colorizer.lua' }
 
 }
 
