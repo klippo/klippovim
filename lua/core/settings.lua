@@ -75,8 +75,8 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   command = "lua vim.bo.filetype = 'terraform'",
   group = group,
 })
-vim.api.nvim_create_autocmd({"BufEnter"},
-{ pattern  = "*",
-command = "lua require('lazygit.utils').project_root_dir()",
-  group = group,
-})
+-- vim.api.nvim_create_autocmd({"BufEnter"},
+-- { pattern  = "*",
+-- command = "lua require('lazygit.utils').project_root_dir()",
+--   group = group,
+-- })

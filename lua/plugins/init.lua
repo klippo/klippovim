@@ -19,10 +19,12 @@ local plugins = {
   },
   --
   { 'klippo/nvim-base16.lua' },
-  { 'nvim-lualine/lualine.nvim' },
-  { 'numToStr/Comment.nvim', },
   { 'andymass/vim-matchup' },
+  { 'lukas-reineke/indent-blankline.nvim' },
+  { 'numToStr/Comment.nvim', },
+  { 'nvim-lualine/lualine.nvim' },
   { 'windwp/nvim-autopairs' },
+  { 'folke/trouble.nvim' },
 
   -- telescope
   { 'nvim-telescope/telescope.nvim' },
@@ -32,6 +34,7 @@ local plugins = {
   { 'kyazdani42/nvim-tree.lua' },
   { 'akinsho/bufferline.nvim' },
   { 'goolord/alpha-nvim' },
+
   -- lsp
   { 'neovim/nvim-lspconfig' },
   { 'hrsh7th/cmp-nvim-lsp' },
@@ -44,9 +47,10 @@ local plugins = {
 
   { 'psliwka/vim-dirtytalk', run = ':DirtytalkUpdate' },
 
-  { 'folke/trouble.nvim' },
+
   { 'hashivim/vim-terraform' },
   { 'hashivim/vim-packer' },
+
   { 'rafamadriz/friendly-snippets' },
   { 'ahmedkhalf/project.nvim',
     requires = { 'neovim/nvim-lspconfig' },
@@ -59,23 +63,22 @@ local plugins = {
       })
     end
   },
-  -- { 'stevearc/dressing.nvim' },
 
   { 'vladdoster/remember.nvim' },
-  { 'lukas-reineke/indent-blankline.nvim' },
 
   { 'ellisonleao/glow.nvim' },
   { 'windwp/nvim-spectre' },
 
   -- Git Tools
-  { 'kdheepak/lazygit.nvim' },
+  -- { 'kdheepak/lazygit.nvim' },
+  { 'TimUntersberger/neogit' },
   { 'lewis6991/gitsigns.nvim' },
   { 'akinsho/git-conflict.nvim' },
 
   { 'preservim/vim-markdown' },
   { 'sudormrfbin/cheatsheet.nvim' },
 
-  { 'NvChad/nvim-colorizer.lua' }
+  { 'NvChad/nvim-colorizer.lua' },
 
 }
 

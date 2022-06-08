@@ -1,6 +1,9 @@
--- -local present, treesitter = pcall(require, "nvim-treesitter")
+local present, treesitter = pcall(require, "nvim-treesitter.configs")
+if not present then
+  return
+end
 
-require'nvim-treesitter.configs'.setup {
+treesitter.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "lua", "python", "hcl", "bash", "yaml", "json", "java", "html", "go" },
   autotag = {
