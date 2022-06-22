@@ -70,7 +70,6 @@ local plugins = {
   { 'windwp/nvim-spectre' },
 
   -- Git Tools
-  -- { 'kdheepak/lazygit.nvim' },
   { 'TimUntersberger/neogit' },
   { 'lewis6991/gitsigns.nvim' },
   { 'akinsho/git-conflict.nvim' },
@@ -79,6 +78,13 @@ local plugins = {
   { 'sudormrfbin/cheatsheet.nvim' },
 
   { 'NvChad/nvim-colorizer.lua' },
+
+  { 'anuvyklack/hydra.nvim',
+    requires = 'anuvyklack/keymap-layer.nvim' -- needed only for pink hydras
+  },
+  {'jlanzarotta/bufexplorer'},
+  {'sindrets/winshift.nvim'}
+
 
 }
 
