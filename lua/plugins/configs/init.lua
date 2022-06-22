@@ -2,14 +2,15 @@
 -- require('plugins.configs.nvimtree').setup()
 -- require('project_nvim').setup()
 local plugin_configs = {
-  "telescope",
+  "alpha",
+  "bufferline",
   "colorizer",
-  "nvimtree",
   "gitsigns",
   "lspconfig",
-  "bufferline",
+  "hydra",
+  "nvimtree",
+  "telescope",
   "treesitter",
-  "alpha"
 }
 for _, pc in pairs(plugin_configs) do
   require('plugins.configs.' .. pc)
