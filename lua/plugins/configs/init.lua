@@ -10,6 +10,7 @@ local plugin_configs = {
   "hydra",
   "nvimtree",
   "telescope",
+  "zen-mode",
   "treesitter",
 }
 for _, pc in pairs(plugin_configs) do
@@ -18,6 +19,7 @@ for _, pc in pairs(plugin_configs) do
 end
 
 require('Comment').setup()
+require('marks').setup()
 -- require('dressing').setup()
 require('git-conflict').setup()
 require('nvim-autopairs').setup {}

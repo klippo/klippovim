@@ -82,8 +82,11 @@ local plugins = {
   { 'anuvyklack/hydra.nvim',
     requires = 'anuvyklack/keymap-layer.nvim' -- needed only for pink hydras
   },
-  {'jlanzarotta/bufexplorer'},
-  {'sindrets/winshift.nvim'}
+  { 'jlanzarotta/bufexplorer' },
+  { 'sindrets/winshift.nvim' },
+  { 'chentoast/marks.nvim' },
+  { 'klippo/zen-mode.nvim', },
+  { 'folke/twilight.nvim' }
 
 
 }
@@ -95,3 +98,4 @@ return packer.startup(function(use)
   end
   require('plugins.configs')
 end)
+-- Lua

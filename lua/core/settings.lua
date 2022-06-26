@@ -41,6 +41,9 @@ set.backup = true
 set.backupdir = vim.fn.stdpath('data')..'/backup'
 set.undofile = true
 
+set.scrolloff = 999
+
+
 vim.g.mapleader = ","
 vim.g.dashboard_default_executive = 'telescope'
 
