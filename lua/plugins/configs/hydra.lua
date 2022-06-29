@@ -108,7 +108,7 @@ Hydra({
   hint = [[
  _f_: files       _m_: marks            _h_: vim help   _c_: execute command
  _o_: old files   _g_: live grep        _k_: keymap     _;_: commands history
- _p_: projects    _/_: search in file   _r_: registers  _?_: search history
+ _p_: projects    _/_: search in file   _b_: buffers    _?_: search history
  ^
  ^ ^              ^ ^        _<Enter>_: Telescope       ^ ^            _<Esc>_
  ]],
@@ -129,7 +129,8 @@ Hydra({
     { 'o', '<Cmd>Telescope oldfiles<CR>', { exit = true, desc = 'Recently opened files' } },
     { 'm', '<Cmd>MarksListBuf<CR>', { exit = true, desc = 'Marks' } },
     { 'k', '<Cmd>Telescope keymaps<CR>', { exit = true } },
-    { 'r', '<Cmd>Telescope registers<CR>', { exit = true } },
+    { 'b', '<Cmd>Telescope buffers<CR>', { exit = true } },
+    -- { 'r', '<Cmd>Telescope registers<CR>', { exit = true } },
     { 'p', '<Cmd>Telescope projects<CR>', { exit = true, desc = 'Projects' } },
     { '/', '<Cmd>Telescope current_buffer_fuzzy_find<CR>', { exit = true, desc = 'Search in file' } },
     { '?', '<Cmd>Telescope search_history<CR>', { exit = true, desc = 'Search history' } },
