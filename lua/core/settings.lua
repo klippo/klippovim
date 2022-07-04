@@ -80,7 +80,7 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
 })
 vim.api.nvim_create_autocmd({"FilterWritePre"}, {
   pattern = "*",
-  command = "lua  if &diff | setlocal wrap< | endif",
+  command = "if &diff | setlocal wrap< | endif",
   group = group,
 })
 -- vim.api.nvim_create_autocmd({"BufEnter"},
