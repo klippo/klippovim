@@ -68,7 +68,6 @@ local group = vim.api.nvim_create_augroup("Local", {})
 --   command = "lua vim.diagnostic.disable()",
 --   group = group,
 -- })
-set.shelltemp = true
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   pattern = {"*/saltstack/*.{yml,yaml}"},
   command = "lua vim.bo.filetype = 'yaml.jinja2'",
