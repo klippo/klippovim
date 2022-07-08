@@ -86,7 +86,10 @@ local plugins = {
   { 'sindrets/winshift.nvim' },
   { 'chentoast/marks.nvim' },
   { 'klippo/zen-mode.nvim', },
-  { 'folke/twilight.nvim' }
+  { 'folke/twilight.nvim' },
+
+  { 'kylechui/nvim-surround'}
+
 
 
 }

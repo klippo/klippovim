@@ -26,3 +26,4 @@ require('nvim-autopairs').setup {}
 require('nvim-autopairs').setup {}
 require('remember')
 require('trouble').setup()
+require("nvim-surround").setup()

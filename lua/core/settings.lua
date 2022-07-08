@@ -68,6 +68,7 @@ local group = vim.api.nvim_create_augroup("Local", {})
 --   command = "lua vim.diagnostic.disable()",
 --   group = group,
 -- })
+set.shelltemp = true
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   pattern = {"*/saltstack/*.{yml,yaml}"},
   command = "lua vim.bo.filetype = 'yaml.jinja2'",
@@ -78,8 +79,8 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
   command = "lua vim.bo.filetype = 'terraform'",
   group = group,
 })
--- vim.api.nvim_create_autocmd({"BufEnter"},
--- { pattern  = "*",
--- command = "lua require('lazygit.utils').project_root_dir()",
---   group = group,
--- })
+vim.api.nvim_create_autocmd({"VimEnter"}, {
+  pattern = "*",
+  command = "if &diff | setlocal wrap< | endif",
+  group = group,
+})
