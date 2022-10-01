@@ -1,12 +1,14 @@
-local set = vim.opt -- set options
+local set         = vim.opt -- set options
 set.termguicolors = true
-set.autoindent  = true
-set.copyindent  = true     -- copy indent from the previous line
-set.smartindent = true
-set.expandtab   = true      -- tabs are space
-set.shiftwidth  = 2        -- number of spaces to use for autoindent
-set.softtabstop = 2       -- number of spaces in tab when editing
-set.tabstop     = 2           -- number of visual spaces per TAB
+set.autoindent    = true
+set.copyindent    = true -- copy indent from the previous line
+set.smartindent   = true
+set.expandtab     = true -- tabs are space
+set.shiftwidth    = 2 -- number of spaces to use for autoindent
+set.softtabstop   = 2 -- number of spaces in tab when editing
+set.tabstop       = 2 -- number of visual spaces per TAB
+
+set.cmdheight = 0
 
 --set.clipboard += unnamedplus
 set.clipboard = "unnamed,unnamedplus"
@@ -28,9 +30,9 @@ set.smartcase = true --       " ignore case if search pattern is lower case
 
 -- folding
 set.foldenable = true
-set.foldlevelstart = 10  -- " default folding level when buffer is opened
-set.foldmethod = "syntax"  -- " fold based on indentation
-set.foldnestmax = 10     -- " maximum nested fold
+set.foldlevelstart = 10 -- " default folding level when buffer is opened
+set.foldmethod = "syntax" -- " fold based on indentation
+set.foldnestmax = 10 -- " maximum nested fold
 
 set.completeopt = "menu,menuone,noselect"
 
@@ -38,7 +40,7 @@ set.splitright = true
 
 
 set.backup = true
-set.backupdir = vim.fn.stdpath('data')..'/backup'
+set.backupdir = vim.fn.stdpath('data') .. '/backup'
 set.undofile = true
 
 -- set.scrolloff = 999
@@ -68,17 +70,17 @@ local group = vim.api.nvim_create_augroup("Local", {})
 --   command = "lua vim.diagnostic.disable()",
 --   group = group,
 -- })
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-  pattern = {"*/saltstack/*.{yml,yaml}"},
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*/saltstack/*.{yml,yaml}" },
   command = "lua vim.bo.filetype = 'yaml.jinja2'",
   group = group,
 })
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = "*.{tf,tfvars}",
   command = "lua vim.bo.filetype = 'terraform'",
   group = group,
 })
-vim.api.nvim_create_autocmd({"VimEnter"}, {
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
   pattern = "*",
   command = "if &diff | setlocal wrap< | endif",
   group = group,

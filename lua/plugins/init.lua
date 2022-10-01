@@ -88,7 +88,7 @@ local plugins = {
   { 'klippo/zen-mode.nvim', },
   { 'folke/twilight.nvim' },
 
-  { 'kylechui/nvim-surround'}
+  { 'kylechui/nvim-surround' }
 
 
 
