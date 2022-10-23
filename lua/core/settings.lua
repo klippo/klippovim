@@ -29,10 +29,11 @@ set.incsearch = true --      " search as characters are entered
 set.smartcase = true --       " ignore case if search pattern is lower case
 
 -- folding
+-- Additional folding configuration in plugins/configs/treesitter.lua
 set.foldenable = true
 set.foldlevelstart = 10 -- " default folding level when buffer is opened
-set.foldmethod = "syntax" -- " fold based on indentation
 set.foldnestmax = 10 -- " maximum nested fold
+-- set.foldmethod = "syntax" -- " fold based on indentation
 
 set.completeopt = "menu,menuone,noselect"
 
