@@ -8,6 +8,7 @@ local plugin_configs = {
   "gitsigns",
   "lspconfig",
   "hydra",
+  "null_ls",
   "nvimtree",
   "telescope",
   "zen-mode",

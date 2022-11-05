@@ -88,10 +88,9 @@ local plugins = {
   { 'klippo/zen-mode.nvim', },
   { 'folke/twilight.nvim' },
 
-  { 'kylechui/nvim-surround' }
-
-
-
+  { 'kylechui/nvim-surround' },
+  { 'towolf/vim-helm'},
+  { 'jose-elias-alvarez/null-ls.nvim' }
 }
 
 
