@@ -9,7 +9,7 @@ local plugins = {
   { "nvim-lua/plenary.nvim" },
   { "lewis6991/impatient.nvim" },
 
-  { "nathom/filetype.nvim" },
+  { "klippo/filetype.nvim" },
   { "wbthomason/packer.nvim" },
   { "saltstack/salt-vim" },
   {
