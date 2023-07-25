@@ -4,7 +4,7 @@ local keymap = require("core.utils").keymap
 -- keymap("n", "<leader>fg", "<cmd> lua require('telescope.builtin').live_grep()<CR>")
 -- keymap("n", "<leader>fb", "<cmd> lua require('telescope.builtin').buffers()<CR>")
 -- keymap("n", "<leader>fh", "<cmd> lua require('telescope.builtin').help_tags()<CR>")
-keymap("n", "<C-n>", ":NvimTreeToggle<CR>")
+-- keymap("n", "<C-n>", ":NvimTreeToggle<CR>")
 keymap("n", "<C-p>", ":Telescope projects<CR>")
 keymap("n", "<leader>gb", ":BufferLinePick<CR>")
 keymap("i", "jj", "<Esc>") -- map jj to esc
