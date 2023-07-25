@@ -54,7 +54,15 @@ return {
 			-- LSP Server Settings
 			---@type lspconfig.options
 			servers = {
+				ansiblels = {},
+				bashls = {},
+				cssls = {},
+				pyright = {},
+				yamlls = {},
+				-- terraformls = {},
+				-- tflint =
 				jsonls = {},
+				-- salt_ls = {},
 				lua_ls = {
 					-- mason = false, -- set to false if you don't want this server to be installed with mason
 					-- Use this to add any additional keymaps
@@ -229,6 +237,8 @@ return {
 					nls.builtins.formatting.goimports,
 					nls.builtins.formatting.stylua,
 					nls.builtins.formatting.terraform_fmt,
+					nls.builtins.code_actions.gitrebase,
+					nls.builtins.formatting.shellharden,
 				},
 			}
 		end,
