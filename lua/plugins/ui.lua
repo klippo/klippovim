@@ -45,12 +45,12 @@ return {
     opts = function()
       local dashboard = require("alpha.themes.dashboard")
       local logo = [[
- ██╗  ██╗██╗     ██╗██████╗ ██████╗  ██████╗ ██╗   ██╗██╗███╗   ███╗ 
- ██║ ██╔╝██║     ██║██╔══██╗██╔══██╗██╔═══██╗██║   ██║██║████╗ ████║ 
- █████╔╝ ██║     ██║██████╔╝██████╔╝██║   ██║██║   ██║██║██╔████╔██║ 
- ██╔═██╗ ██║     ██║██╔═══╝ ██╔═══╝ ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ 
- ██║  ██╗███████╗██║██║     ██║     ╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ 
- ╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚═╝      ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ 
+ ██╗  ██╗██╗     ██╗██████╗ ██████╗  ██████╗ ██╗   ██╗██╗███╗   ███╗
+ ██║ ██╔╝██║     ██║██╔══██╗██╔══██╗██╔═══██╗██║   ██║██║████╗ ████║
+ █████╔╝ ██║     ██║██████╔╝██████╔╝██║   ██║██║   ██║██║██╔████╔██║
+ ██╔═██╗ ██║     ██║██╔═══╝ ██╔═══╝ ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+ ██║  ██╗███████╗██║██║     ██║     ╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+ ╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚═╝      ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
       ]]
 
       dashboard.section.header.val = vim.split(logo, "\n")
@@ -103,29 +103,31 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function()
-      -- local icons = require("lazyvim.config").icons
+      local icons = require("core.config").icons
       -- local Util = require("lazyvim.util")
 
       return {
         options = {
-          theme = "auto",
+          theme = "onedark",
           globalstatus = true,
           disabled_filetypes = { statusline = { "dashboard", "alpha" } },
+          section_separators = { left = "", right = "" },
+          component_separators = { left = "", right = "" },
         },
         sections = {
           lualine_a = { "mode" },
-          lualine_b = { "branch" },
+          lualine_b = { "branch", "diff" },
           lualine_c = {
             {
               "diagnostics",
-              -- symbols = {
-              --   error = icons.diagnostics.Error,
-              --   warn = icons.diagnostics.Warn,
-              --   info = icons.diagnostics.Info,
-              --   hint = icons.diagnostics.Hint,
-              -- },
+              symbols = {
+                error = icons.diagnostics.Error,
+                warn = icons.diagnostics.Warn,
+                info = icons.diagnostics.Info,
+                hint = icons.diagnostics.Hint,
+              },
             },
-            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+            { "filetype", separator = "", padding = { left = 1, right = 0 } },
             { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
             -- stylua: ignore
             {
@@ -137,21 +139,21 @@ return {
             -- stylua: ignore
             {
               function() return "  " .. require("dap").status() end,
-              cond = function () return package.loaded["dap"] and require("dap").status() ~= "" end,
+              cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
               -- color = Util.fg("Debug"),
             },
             -- { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = Util.fg("Special") },
             {
               "diff",
-              -- symbols = {
-              --   added = icons.git.added,
-              --   modified = icons.git.modified,
-              --   removed = icons.git.removed,
-              -- },
+              symbols = {
+                added = icons.git.added,
+                modified = icons.git.modified,
+                removed = icons.git.removed,
+              },
             },
           },
           lualine_y = {
-            { "progress", separator = " ", padding = { left = 1, right = 0 } },
+            { "progress", separator = " ",                  padding = { left = 1, right = 0 } },
             { "location", padding = { left = 0, right = 1 } },
           },
           lualine_z = {
@@ -193,16 +195,15 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      require('onedark').setup {
-        style = 'cool'
-      }
-      require('onedark').load()
+      require("onedark").setup({
+        style = "darker",
+      })
+      require("onedark").load()
     end,
   },
-    -- icons
+  -- icons
   { "nvim-tree/nvim-web-devicons", lazy = true },
 
   -- ui components
-  { "MunifTanjim/nui.nvim", lazy = true },
-
+  { "MunifTanjim/nui.nvim",        lazy = true },
 }

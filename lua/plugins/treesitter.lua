@@ -22,7 +22,7 @@ return {
     cmd = { "TSUpdateSync" },
     keys = {
       { "<c-space>", desc = "Increment selection" },
-      { "<bs>", desc = "Decrement selection", mode = "x" },
+      { "<bs>",      desc = "Decrement selection", mode = "x" },
     },
     ---@type TSConfig
     opts = {
@@ -36,6 +36,7 @@ return {
         "javascript",
         "json",
         "hcl",
+        "go",
         "lua",
         "luadoc",
         "luap",
@@ -75,7 +76,6 @@ return {
         end, opts.ensure_installed)
       end
       require("nvim-treesitter.configs").setup(opts)
-
     end,
   },
 }
