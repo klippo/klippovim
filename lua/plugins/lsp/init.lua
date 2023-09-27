@@ -191,6 +191,7 @@ return {
 					end
 				end
 				require("lspconfig")[server].setup(server_opts)
+				require("lspconfig").salt_ls.setup({})
 			end
 
 			-- get all the servers that are available thourgh mason-lspconfig
@@ -269,6 +270,9 @@ return {
 		keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
 		build = ":MasonUpdate",
 		opts = {
+			registries = {
+				"github:mason-org/mason-registry",
+			},
 			ensure_installed = {
 				"stylua",
 				"shfmt",

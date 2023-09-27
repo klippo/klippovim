@@ -33,4 +33,17 @@ return {
 			})
 		end,
 	},
+	{
+		"echasnovski/mini.indentscope",
+		version = false,
+		lazy = false,
+		config = function()
+			require("mini.indentscope").gen_animation.exponential({ easing = "out", duration = 1000, unit = "total" })
+			--  {
+			-- draw = {
+			-- 	delay = 0,
+			-- },
+			-- })
+		end,
+	},
 }
